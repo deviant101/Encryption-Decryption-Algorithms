@@ -30,10 +30,10 @@ int strLen(string &str){    //to find string length
 int main(){
 
     string PlainText;
-    cout<<"Enter Plain Text: ";
+    cout<<"Plain Text: ";
     getline(cin,PlainText);
 
-    cout<<"Encrypted Message: "<<CaesarEncryption(PlainText)<<endl;
+    cout<<"\nCipher Text: "<<CaesarEncryption(PlainText)<<endl;
 
     return 0;
 }
