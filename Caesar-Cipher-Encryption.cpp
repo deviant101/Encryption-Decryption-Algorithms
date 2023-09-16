@@ -5,6 +5,17 @@ using namespace std;
 string CaesarEncryption(string plain);
 int strLen(string &str);
 
+int main(){
+
+    string PlainText;
+    cout<<"Plain Text: ";
+    getline(cin,PlainText);
+
+    cout<<"\nCipher Text: "<<CaesarEncryption(PlainText)<<endl;
+
+    return 0;
+}
+//----------------//Functions//----------------//
 string CaesarEncryption(string plain){
 
     int key=3;
@@ -25,15 +36,4 @@ int strLen(string &str){    //to find string length
     while(str[len]!='\0')
         ++len;
     return len;
-}
-
-int main(){
-
-    string PlainText;
-    cout<<"Plain Text: ";
-    getline(cin,PlainText);
-
-    cout<<"\nCipher Text: "<<CaesarEncryption(PlainText)<<endl;
-
-    return 0;
 }
