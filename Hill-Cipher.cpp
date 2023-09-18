@@ -22,7 +22,13 @@ int main(){
     PlainText=Hill_Cipher_Encryption(PlainText,Key);
     cout<<"Encrypted Text: "<<PlainText<<endl;
 
-    cout<<"\nDecrypted Text: "<<Hill_Cipher_Decryption(PlainText,Key);
+    cout<<"\nDo You Want to Decrypt the Cipher Text to Plain Text (Y/N) : ";
+    char choice;
+    cin>>choice;
+    if(choice=='Y' || choice=='y')
+        cout<<"\nDecrypted Text: "<<Hill_Cipher_Decryption(PlainText,Key)<<endl;
+    else
+        cout<<"\nExiting...\n";
 
     return 0;
 }
@@ -86,9 +92,9 @@ string Hill_Cipher_Decryption(string cipher, int key[2][2]){
         // cout<<endl;
     }
     int i=1;
-    while(1){           //finding multiplicative inverse of 1/det
+    while(1){                        //finding multiplicative inverse of 1/det
         // cout<<i<<" "<<i*det%26<<endl;
-        if((i*det)%26==1){
+        if((i*det)%26==1){           //can use Extended Euclidean Algorithm for large numbers
             det=i;
             break;
         }
